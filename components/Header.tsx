@@ -1,10 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import { SearchIcon } from "@heroicons/react/solid";
+import { GlobeAltIcon, MenuIcon, SearchIcon, UserCircleIcon } from "@heroicons/react/solid";
+import Banner from "./Banner";
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow p-1 md:px-10 h-16 items-center ">
-      <div className="relative flex items-center h-8 overflow-hidden">
+    <header className="sticky top-0 z-50 grid grid-cols-3 bg-white-100 shadow p-1 md:px-5 h-16 items-center ">
+      <div className="relative flex items-center h-8 overflow-hidden cursor-pointer ">
         {/* logo */}
 
         <Image
@@ -13,34 +14,34 @@ export default function Header() {
           objectPosition="left"
           width={150}
           height={100}
+          alt = "logo"
         />
       </div>
 
-      <div className=" flex flex-row items-center md:border-2 rounded-full py-2 md:shadow-sm md:hover:shadow-md w-fit p-1 h-10">
+      <div className="flex items-center md:border-2 py-2 rounded-full">
         {/* Search */}
         <input
-          className="mx-2 flex-grow bg-transparent outline-none"
+          className="pl-5 bg-transparent outline-none flex-grow text-gray-600 placeholder-gray-400"
           type="text"
           placeholder="Start Your search"
         />
-        <SearchIcon className="hidden md:inline-flex h-8 w-auto text-white bg-red-400 rounded-full cursor-pointer p-2" />
+        <SearchIcon className=" mx-auto hidden md:inline-flex h-8  text-white bg-red-400 rounded-full md:mx-2 " />
       </div>
 
-      <div className="flex">
-        <div className="hover:rounder-full">
-          <span>Airbnb your home</span>
-        </div>
+      <div className="flex space-x-4 justify-end items-center text-gray-500">
+        
+       <p className="hidden  lg:inline-flex">Become a host</p>
+       <GlobeAltIcon className="h-6 cursor-pointer"/>
+       <div className="flex rounded-full p-2  ">
+        <MenuIcon className="h-6 cursor-pointer"/>
+        <UserCircleIcon className="h-6 cursor-pointer" />
 
-        <i>Globe</i>
-
-        <div className="flex">
-          <div> Menu</div>
-          
-          <div>Profile Pic</div>
-        </div>
+       </div>
 
 
 
+
+        
       </div>
     </header>
   );
