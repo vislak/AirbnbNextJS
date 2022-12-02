@@ -25,7 +25,7 @@ export default function Header() {
           type="text"
           placeholder="Start Your search"
         />
-        <SearchIcon className=" mx-auto hidden md:inline-flex h-8  text-white bg-red-400 rounded-full md:mx-2 " />
+        <SearchIcon className=" mx-auto hidden md:inline-flex h-8 cursor-pointer  text-white bg-red-400 rounded-full md:mx-2 " />
       </div>
 
       <div className="flex space-x-4 justify-end items-center text-gray-500">
